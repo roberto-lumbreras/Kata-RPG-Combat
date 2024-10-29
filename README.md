@@ -1,3 +1,4 @@
+This is a repository that implements the exercise below
 
 # Kata RPG Combat
 
