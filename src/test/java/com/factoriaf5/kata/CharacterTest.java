@@ -18,6 +18,17 @@ public class CharacterTest {
     }
 
     @Test
+    public void testAreNotAllies() {
+        Character c1;
+        Character c2;
+        c1 = new Character(AttackerType.MELEE);
+        c2 = new Character(AttackerType.MELEE);
+        c1.joinFaction(Faction.ARCANE_CONCLAVE);
+        c2.joinFaction(Faction.CHILDREN_OF_CHAOS);
+        assertFalse(Character.areAllies(c1, c2));
+    }
+
+    @Test
     public void testAlliesCanBeHealedIfHealthIsNotFull() {
         Character c1;
         Character c2;
